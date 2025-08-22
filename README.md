@@ -61,4 +61,4 @@ To manage insignias, edit the `insignias` array in `app.js`:
 *   **Modifying an Insignia:** Find the insignia object by its `id` and change its `name`, `imageUrl`, `levels`, or `restrictions` properties.
 *   **Removing an Insignia:** Delete the insignia object from the `insignias` array.
 
-* **This is a project made by an AI
+* **This is a project made by an AI**
