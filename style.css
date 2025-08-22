@@ -1,0 +1,297 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+    color: #f0f0f0; /* Light text */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 15px;
+    align-items: flex-start; /* Align content to the top */
+}
+
+.squares-section {
+    display: flex;
+    flex-direction: row; /* Keep as row */
+    gap: 15px; /* Reduced gap between actions panel and left squares */
+    align-items: flex-start; /* Align everything to the top */
+}
+
+.left-squares,
+.right-squares {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Reduced space between squares in a column */
+}
+
+.square {
+    width: 140px;
+    height: 180px; /* Increased height */
+    border: 1px solid #444;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out children vertically */
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-align: center;
+    padding: 5px; /* Adjust padding to give space on all sides */
+    position: relative; /* Keep for potential future needs, but won't be used for level controls positioning */
+}
+
+.square:hover {
+    background-color: #444;
+}
+
+.square.selected {
+    border: 2px solid #00aaff; /* Blue border for selected in dark mode */
+    background-color: #3a3a3a;
+}
+
+.square-slot-name {
+    font-size: 0.8em;
+    color: #bbb;
+    margin-bottom: 2px; /* Reduced margin to make it more compact */
+}
+
+.square .insignia-image {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+    flex-shrink: 0; /* Prevent image from shrinking */
+    margin-top: 0; /* Adjust margin */
+    margin-bottom: 0; /* Adjust margin */
+}
+
+.square .insignia-name {
+    font-size: 0.75em;
+    color: #ccc;
+    margin-top: 2px; /* Small margin above name */
+    margin-bottom: 4px; /* Slightly increased margin below name */
+    word-wrap: break-word;
+    max-width: 90%;
+}
+
+.insignia-level-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* Removed absolute positioning */
+    background-color: transparent; /* Make transparent to avoid background overlap */
+    padding: 0; /* Remove padding */
+    border-radius: 0;
+    margin-top: auto; /* Push to the bottom within the flex container */
+    margin-bottom: 5px; /* Added some bottom margin */
+}
+
+.insignia-level-controls button {
+    width: 25px;
+    height: 25px;
+    font-size: 1em;
+    border: 1px solid #666;
+    background-color: #555;
+    color: #f0f0f0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.insignia-level-controls button:hover {
+    background-color: #666;
+}
+
+.statistics-section {
+    width: 280px; /* More compact width */
+    padding: 10px;
+    border: 1px solid #444;
+    background-color: #333;
+}
+
+.statistics-section h2 {
+    color: #f0f0f0;
+}
+
+.attribute-category h3 {
+    color: #00aaff; /* Blue for category headers in dark mode */
+}
+
+.attribute-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.attribute-category ul li {
+    padding: 3px 0;
+    border-bottom: 1px dotted #555;
+}
+
+.attribute-category ul li:last-child {
+    border-bottom: none;
+}
+
+.insignia-selection-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Darker background overlay */
+    /* Removed display: flex; justify-content: center; align-items: center; */
+}
+
+.insignia-selection-modal.active {
+    display: flex; /* Only show when active */
+    justify-content: center;
+    align-items: center;
+}
+
+.insignia-selection-modal .modal-content {
+    background-color: #2a2a2a; /* Darker modal background */
+    border: 1px solid #444;
+    color: #f0f0f0;
+    margin: auto; /* Center in the flex container */
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%; /* Smaller width */
+    max-width: 600px; /* Max width for larger screens */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Add shadow for depth */
+    position: relative;
+}
+
+.insignia-selection-modal h2 {
+    color: #f0f0f0;
+}
+
+.insignia-item {
+    background-color: #3a3a3a;
+    border: 1px solid #555;
+    color: #f0f0f0;
+}
+
+.insignia-item:hover {
+    background-color: #4a4a4a;
+}
+
+.insignia-item.selected {
+    background-color: #3a3a5a; /* Darker blue for selected insignia item */
+    border-color: #00aaff;
+}
+
+.insignia-item img {
+    border: 1px solid #666;
+}
+
+.actions-panel {
+    position: relative; /* Change to relative or remove if not needed for specific sub-positioning */
+    top: auto; /* Reset top */
+    left: auto; /* Reset left */
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px;
+    margin-right: 15px; /* Space between buttons and left squares */
+}
+
+.action-button {
+    padding: 8px 15px; /* Smaller padding */
+    font-size: 0.9em; /* Smaller font size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    color: white;
+}
+
+.new-loadout-button {
+    background-color: #00aaff; /* Blue */
+}
+
+.new-loadout-button:hover {
+    background-color: #0088cc;
+}
+
+.share-button {
+    background-color: #28a745; /* Green */
+}
+
+.share-button:hover {
+    background-color: #218838;
+}
+
+.attack-type-color {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+    background-color: transparent; /* Default transparent */
+}
+
+/* Colors for attack types */
+.color-cryo {
+    background-color: cyan;
+}
+
+.color-pyro {
+    background-color: lightcoral; /* Using lightcoral for light red */
+}
+
+.color-umbro {
+    background-color: #e0b0ff; /* Light purple */
+}
+
+.color-electro {
+    background-color: deepskyblue; /* Using deepskyblue for blue */
+}
+
+.insignia-category {
+    margin-bottom: 15px;
+}
+
+.category-header {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.rarity-color {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.rarity-color.legendary {
+    background-color: gold; /* Yellow */
+}
+
+.rarity-color.epic {
+    background-color: deeppink; /* Pink/Red */
+}
+
+.rarity-color.rare {
+    background-color: blueviolet; /* Purple */
+}
+
+.category-insignias {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid for insignias */
+    gap: 10px;
+}
+
+.insignia-item.disabled {
+    opacity: 0.3; /* Make disabled insignias more faded */
+    cursor: not-allowed;
+}

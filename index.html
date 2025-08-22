@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoA Insignia Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="squares-section">
+            <div class="actions-panel">
+                <button id="newLoadoutButton" class="action-button new-loadout-button">+ New Loadout</button>
+                <button id="shareButton" class="action-button share-button">Share</button>
+            </div>
+            <div class="left-squares">
+                <div class="square" data-square-id="left-1" data-square-name="Helmet">
+                    <span class="square-slot-name">Helmet</span>
+                    <img src="" alt="" class="insignia-image" style="display:none;">
+                    <span class="insignia-name"></span>
+                    <div class="insignia-level-controls" style="display:none;">
+                        <button class="level-down">-</button>
+                        <span class="level-display">1</span>
+                        <button class="level-up">+</button>
+                    </div>
+                </div>
+                <div class="square" data-square-id="left-2" data-square-name="Chestplate">
+                    <span class="square-slot-name">Chestplate</span>
+                    <img src="" alt="" class="insignia-image" style="display:none;">
+                    <span class="insignia-name"></span>
+                    <div class="insignia-level-controls" style="display:none;">
+                        <button class="level-down">-</button>
+                        <span class="level-display">1</span>
+                        <button class="level-up">+</button>
+                    </div>
+                </div>
+                <div class="square" data-square-id="left-3" data-square-name="Pants">
+                    <span class="square-slot-name">Pants</span>
+                    <img src="" alt="" class="insignia-image" style="display:none;">
+                    <span class="insignia-name"></span>
+                    <div class="insignia-level-controls" style="display:none;">
+                        <button class="level-down">-</button>
+                        <span class="level-display">1</span>
+                        <button class="level-up">+</button>
+                    </div>
+                </div>
+                <div class="square" data-square-id="left-4" data-square-name="Gloves">
+                    <span class="square-slot-name">Gloves</span>
+                    <img src="" alt="" class="insignia-image" style="display:none;">
+                    <span class="insignia-name"></span>
+                    <div class="insignia-level-controls" style="display:none;">
+                        <button class="level-down">-</button>
+                        <span class="level-display">1</span>
+                        <button class="level-up">+</button>
+                    </div>
+                </div>
+                <div class="square" data-square-id="left-5" data-square-name="Shoes">
+                    <span class="square-slot-name">Shoes</span>
+                    <img src="" alt="" class="insignia-image" style="display:none;">
+                    <span class="insignia-name"></span>
+                    <div class="insignia-level-controls" style="display:none;">
+                        <button class="level-down">-</button>
+                        <span class="level-display">1</span>
+                        <button class="level-up">+</button>
+                    </div>
+                </div>
+                <div class="square" data-square-id="left-6" data-square-name="Talisman">
+                    <span class="square-slot-name">Talisman</span>
+                    <img src="" alt="" class="insignia-image" style="display:none;">
+                    <span class="insignia-name"></span>
+                    <div class="insignia-level-controls" style="display:none;">
+                        <button class="level-down">-</button>
+                        <span class="level-display">1</span>
+                        <button class="level-up">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right-squares">
+                <div class="square" data-square-id="right-1" data-square-name="Weapon">
+                    <span class="square-slot-name">Weapon</span>
+                    <img src="" alt="" class="insignia-image" style="display:none;">
+                    <span class="insignia-name"></span>
+                    <div class="insignia-level-controls" style="display:none;">
+                        <button class="level-down">-</button>
+                        <span class="level-display">1</span>
+                        <button class="level-up">+</button>
+                    </div>
+                </div>
+                <div class="square" data-square-id="right-2" data-square-name="Necklace">
+                    <span class="square-slot-name">Necklace</span>
+                    <img src="" alt="" class="insignia-image" style="display:none;">
+                    <span class="insignia-name"></span>
+                    <div class="insignia-level-controls" style="display:none;">
+                        <button class="level-down">-</button>
+                        <span class="level-display">1</span>
+                        <button class="level-up">+</button>
+                    </div>
+                </div>
+                <div class="square" data-square-id="right-3" data-square-name="Bracers">
+                    <span class="square-slot-name">Bracers</span>
+                    <img src="" alt="" class="insignia-image" style="display:none;">
+                    <span class="insignia-name"></span>
+                    <div class="insignia-level-controls" style="display:none;">
+                        <button class="level-down">-</button>
+                        <span class="level-display">1</span>
+                        <button class="level-up">+</button>
+                    </div>
+                </div>
+                <div class="square" data-square-id="right-4" data-square-name="Ring">
+                    <span class="square-slot-name">Ring</span>
+                    <img src="" alt="" class="insignia-image" style="display:none;">
+                    <span class="insignia-name"></span>
+                    <div class="insignia-level-controls" style="display:none;">
+                        <button class="level-down">-</button>
+                        <span class="level-display">1</span>
+                        <button class="level-up">+</button>
+                    </div>
+                </div>
+                <div class="square" data-square-id="right-5" data-square-name="Seal">
+                    <span class="square-slot-name">Seal</span>
+                    <img src="" alt="" class="insignia-image" style="display:none;">
+                    <span class="insignia-name"></span>
+                    <div class="insignia-level-controls" style="display:none;">
+                        <button class="level-down">-</button>
+                        <span class="level-display">1</span>
+                        <button class="level-up">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="insignia-selection-modal" id="insigniaSelectionModal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Select an Insignia</h2>
+                <div id="insigniaList" class="insignia-list">
+                    <div id="legendaryInsignias" class="insignia-category">
+                        <h3 class="category-header"><span class="rarity-color legendary"></span>Legendary</h3>
+                        <div class="category-insignias"></div>
+                    </div>
+                    <div id="epicInsignias" class="insignia-category">
+                        <h3 class="category-header"><span class="rarity-color epic"></span>Epic</h3>
+                        <div class="category-insignias"></div>
+                    </div>
+                    <div id="rareInsignias" class="insignia-category">
+                        <h3 class="category-header"><span class="rarity-color rare"></span>Rare</h3>
+                        <div class="category-insignias"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="statistics-section">
+            <h2>Attributes</h2>
+            <div class="attribute-category">
+                <h3>Primary Attributes:</h3>
+                <ul>
+                    <li>Strength</li>
+                    <li>Intelligence</li>
+                    <li>Agility</li>
+                    <li>Spirit</li>
+                    <li>Physique</li>
+                </ul>
+            </div>
+            <div class="attribute-category">
+                <h3>Basic:</h3>
+                <ul>
+                    <li>%HP</li>
+                    <li>%PATK</li>
+                    <li>%MATK</li>
+                    <li>%PDEF</li>
+                    <li>%MDEF</li>
+                    <li>PCrit</li>
+                    <li>MCrit</li>
+                    <li>Crit DMG</li>
+                    <li>ASPD</li>
+                    <li>CD Rate</li>
+                </ul>
+            </div>
+            <div class="attribute-category">
+                <h3>Element:</h3>
+                <ul>
+                    <li>Cryo</li>
+                    <li>Cryo RES</li>
+                    <li>Pyro</li>
+                    <li>Pyro RES</li>
+                    <li>Electro</li>
+                    <li>Electro RES</li>
+                    <li>Umbro</li>
+                    <li>Umbro RES</li>
+                </ul>
+            </div>
+            <div class="attribute-category">
+                <h3>Advanced:</h3>
+                <ul>
+                    <li>DMG Bonus</li>
+                    <li>DMG RES</li>
+                    <li>BATK DMG</li>
+                    <li>Skill DMG</li>
+                    <li>Resonance Recharge</li>
+                    <li>DMG during Resonance</li>
+                    <li>Shield Break Efficiency</li>
+                    <li>DMG After Shield Break</li>
+                    <li>DMG to Otherworld</li>
+                    <li>DMG to Slowed</li>
+                    <li>DMG to Exhausted</li>
+                    <li>DMG to Scorched</li>
+                </ul>
+            </div>
+            <div class="attribute-category">
+                <h3>Attack Type:</h3>
+                <ul>
+                    <li id="attackTypeDisplay"><span id="attackTypeColor" class="attack-type-color"></span><span id="attackTypeName">None</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
