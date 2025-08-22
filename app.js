@@ -19,7 +19,28 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 'leotids-guard', name: 'Leotids Insignia', imageUrl: 'images/leotids.png', levels: [{ "Skill DMG": 4,"ASPD": 20 }, { "Skill DMG": 6,"ASPD": 30 },{ "Skill DMG": 8,"ASPD": 40 }], restrictions: ['Chestplate', 'Gloves'], rarity: 'Legendary' },
         { id: 'ophelia', name: 'Ophelia Insignia', imageUrl: 'images/ophelia.png', levels: [{ "All Attributes ENH": 10,"CD Rate": 20 }, { "All Attributes ENH": 15,"CD Rate": 30 },{ "All Attributes ENH": 20,"CD Rate": 40 }], restrictions: ['Chestplate', 'Gloves'], rarity: 'Legendary' },
         { id: 'claudius', name: 'Claudius Insignia', imageUrl: 'images/claudius.png', levels: [{ "Crit DMG": 10},{ "Crit DMG": 15},{ "Crit DMG": 20} ], restrictions: ['Helmet', 'Chestplate'], rarity: 'Legendary' },
-        { id: 'meradia', name: 'Meradia Insignia', imageUrl: 'images/meradia.png', levels: [{ "DMG Bonus": 4, "DMG RES": 4},{ "DMG Bonus": 6, "DMG RES": 6},{ "DMG Bonus": 8, "DMG RES": 8} ], restrictions: ['Gloves', 'Shoes'], rarity: 'Legendary' }
+        { id: 'meradia', name: 'Meradia Insignia', imageUrl: 'images/meradia.png', levels: [{ "DMG Bonus": 4, "DMG RES": 4},{ "DMG Bonus": 6, "DMG RES": 6},{ "DMG Bonus": 8, "DMG RES": 8} ], restrictions: ['Gloves', 'Shoes'], rarity: 'Legendary' },
+        { id: 'golem-shield', name: 'Golem - Shield Insignia', imageUrl: 'images/golem-shield.png', levels: [{ "HP": 3, "PDEF": 3, "MDEF": 3},{ "HP": 4, "PDEF": 4, "MDEF": 4},{ "HP": 5, "PDEF": 5, "MDEF": 5} ], restrictions: ['Chestplate', 'Pants'], rarity: 'Epic' },
+        { id: 'crystallian-beast', name: 'Crystallian Beast Insignia', imageUrl: 'images/crystallian-beast.png', levels: [{ "DMG during Resonance": 3},{ "DMG during Resonance": 4.5},{ "DMG during Resonance": 6} ], restrictions: ['Chestplate', 'Talisman'], rarity: 'Epic' },
+        { id: 'vik-brotherhood', name: 'Vik Brotherhood Insignia', imageUrl: 'images/vik-brotherhood.png', levels: [{"Pyro ENH":6, "DMG to Scorched": 2},{"Pyro ENH":9, "DMG to Scorched": 3},{"Pyro ENH":12, "DMG to Scorched": 4}], restrictions: ['Gloves', 'Bracers'], rarity: 'Epic' },
+        { id: 'goramos', name: 'Goramos Insignia', imageUrl: 'images/goramos.png', levels: [{"DMG Bonus":2},{"DMG Bonus":3},{"DMG Bonus":4}], restrictions: ['Pants', 'Seal'], rarity: 'Epic' },
+        { id: 'andré', name: 'André Insignia', imageUrl: 'images/andré.png', levels: [{"All Attribute ENH":6, "All Attribute RES": 6},{"All Attribute ENH":9, "All Attribute RES": 9},{"All Attribute ENH":12, "All Attribute RES": 12}], restrictions: ['Helmet', 'Ring'], rarity: 'Epic' },
+        { id: 'joker', name: 'Joker Insignia', imageUrl: 'images/joker.png', levels: [{"Umbro ENH":6, "DMG to Exhausted": 2},{"Umbro ENH":9, "DMG to Exhausted": 3},{"Umbro ENH":12, "DMG to Exhausted": 4}], restrictions: ['Shoes', 'Necklace'], rarity: 'Epic' },
+        { id: 'clockwork-warden', name: 'Clockwork Warden Insignia', imageUrl: 'images/clockwork-warden.png', levels: [{"PCrit":3, "MCrit": 3},{"PCrit":4.5, "MCrit": 4.5},{"PCrit":6, "MCrit": 6}], restrictions: ['Necklace', 'Bracers'], rarity: 'Epic' },
+        { id: 'thunderbolt-striker', name: 'Thunderbolt Striker Insignia', imageUrl: 'images/thunderbolt-striker.png', levels: [{"Crit DMG":5},{"Crit DMG":7.5},{"Crit DMG":10}], restrictions: ['Necklace', 'Bracers'], rarity: 'Epic' },
+        { id: 'kernnos', name: 'Kernnos Insignia', imageUrl: 'images/kernnos.png', levels: [{"Strength":90, "Intelligence": 90},{"Strength":135, "Intelligence": 135},{"Strength":180, "Intelligence": 180}], restrictions: ['Helmet', 'Ring'], rarity: 'Epic' },
+        { id: 'ancient-guardian-fist', name: 'Ancient Guardian - Fist Insignia', imageUrl: 'images/ancient-guardian-fist.png', levels: [{"Cryo ENH":6, "DMG to Slowed": 2},{"Cryo ENH":9, "DMG to Slowed": 3},{"Cryo ENH":12, "DMG to Slowed": 4}], restrictions: ['Gloves', 'Bracers'], rarity: 'Epic' },
+        { id: 'ancient-guardian-charm', name: 'Ancient Guardian - Charm Insignia', imageUrl: 'images/ancient-guardian-charm.png', levels: [{"ASPD":20, "CD Rate": 20},{"ASPD":30, "CD Rate": 30},{"ASPD":40, "CD Rate": 40}], restrictions: ['Gloves', 'Shoes'], rarity: 'Epic' },
+        { id: 'sawblade-mech', name: 'Sawblade Mech Insignia', imageUrl: 'images/sawblade-mech.png', levels: [{"BATK  DMG": 4},{"BATK  DMG": 6},{"BATK  DMG": 10}], restrictions: ['Pants', 'Seal'], rarity: 'Epic' },
+        { id: 'tower-shield-mech', name: 'Tower Shield Mech Insignia', imageUrl: 'images/tower-shield-mech.png', levels: [{"Skill  DMG": 2},{"Skill  DMG": 3},{"Skill  DMG": 5}], restrictions: ['Chestplate', 'Talisman'], rarity: 'Epic' },
+        { id: 'electric-whip-guard', name: 'Electric Whip Guard Insignia', imageUrl: 'images/electric-whip-guard.png', levels: [{"Electro  ENH": 6, "DMG to Vulnerable": 2},{"Electro  ENH": 9, "DMG to Vulnerable": 3},{"Electro  ENH": 12, "DMG to Vulnerable": 4}], restrictions: ['Shoes', 'Necklace'], rarity: 'Epic' },
+        { id: 'magitech-heavy-mech', name: 'Magitech Heavy Mech Insignia', imageUrl: 'images/magitech-heavy-mech.png', levels: [{"PATK": 3, "MATK": 3},{"PATK": 4.5, "MATK": 4.5},{"PATK": 6, "MATK": 6}], restrictions: ['Weapon'], rarity: 'Epic' },
+        { id: 'darkflame-expeller', name: 'Darkflame Expeller Insignia', imageUrl: 'images/darkflame-expeller.png', levels: [{"HP": 3},{"HP": 4},{"HP": 5}], restrictions: ['Chestplate','Pants'], rarity: 'Epic' },
+        { id: 'thunderous-thrasher', name: 'Thunderous Thrasher Insignia', imageUrl: 'images/thunderous-thrasher.png', levels: [{"DMG to Otherworld":3},{"DMG to Otherworld":4.5},{"DMG to Otherworld":6}], restrictions: ['Helmet','Shoes'], rarity: 'Epic' },
+        { id: 'void-ring-keeper', name: 'Void Ring Keeper Insignia', imageUrl: 'images/void-ring-keeper.png', levels: [{"Resonance Recharge":3, "DMG during Resonance": 3},{"Resonance Recharge":4.5, "DMG during Resonance": 4.5},{"Resonance Recharge":6, "DMG during Resonance": 6}], restrictions: ['Necklace','Ring'], rarity: 'Epic' },
+        { id: 'chaos-breaker', name: 'Chaos Breaker Insignia', imageUrl: 'images/chaos-breaker.png', levels: [{"Shield Break Efficiency":3, "DMG after Shield Break": 3},{"Shield Break Efficiency":4.5, "DMG after Shield Break": 4.5},{"Shield Break Efficiency":6, "DMG after Shield Break": 6}], restrictions: ['Gloves','Bracers'], rarity: 'Epic' },
+        { id: 'mystic', name: 'Mystic Insignia', imageUrl: 'images/mystic.png', levels: [{"Crit DMG": 8},{"Crit DMG": 8},{"Crit DMG": 8} ], restrictions: ['Weapon'], rarity: 'Epic' },
+
     ];
 
     // Attributes that should not display a percentage sign
@@ -27,10 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
         'Strength', 'Intelligence', 'Agility', 'Spirit', 'Physique',
         'ASPD', 'CD Rate',
         'Cryo ENH', 'Cryo RES', 'Pyro ENH', 'Pyro RES', 'Electro ENH', 'Electro RES', 'Umbro ENH', 'Umbro RES',
-        'HP', 'PATK', 'MATK', 'PDEF', 'MDEF',
         'DMG to Bosses',
-        'All Attributes ENH', // Add All Attributes ENH to not display percentage
-        'All Attributes RES' // Add All Attributes RES to not display percentage
+        'All Attributes ENH',
+        'All Attributes RES'
     ];
 
     // Initial attributes (can be set to base values)
@@ -168,16 +188,41 @@ document.addEventListener('DOMContentLoaded', () => {
         selectedSquare = square;
         const squareName = selectedSquare.dataset.squareName;
 
-        // Clear previous insignias from categories
-        document.querySelectorAll('.category-insignias').forEach(container => {
-            container.innerHTML = '';
-        });
+        // Get references to category headers and containers
+        const legendaryHeader = document.querySelector('#legendaryInsignias h3');
+        const legendaryContainer = document.querySelector('#legendaryInsignias .category-insignias');
+        const epicHeader = document.querySelector('#epicInsignias h3');
+        const epicContainer = document.querySelector('#epicInsignias .category-insignias');
+        const rareHeader = document.querySelector('#rareInsignias h3');
+        const rareContainer = document.querySelector('#rareInsignias .category-insignias');
+
+        // Clear previous insignias from categories and reset display styles
+        legendaryContainer.innerHTML = '';
+        epicContainer.innerHTML = '';
+        rareContainer.innerHTML = '';
+
+        // Arrays to hold compatible insignias for each rarity
+        const compatibleLegendary = [];
+        const compatibleEpic = [];
+        const compatibleRare = [];
 
         insignias.forEach(insignia => {
             const isRestricted = insignia.restrictions.length > 0 && !insignia.restrictions.includes(squareName);
             
-            // Only show insignias that are not restricted for the current square
             if (!isRestricted) {
+                if (insignia.rarity === 'Legendary') {
+                    compatibleLegendary.push(insignia);
+                } else if (insignia.rarity === 'Epic') {
+                    compatibleEpic.push(insignia);
+                } else if (insignia.rarity === 'Rare') {
+                    compatibleRare.push(insignia);
+                }
+            }
+        });
+
+        // Function to render insignias for a given category
+        const renderInsigniasForCategory = (insigniaArray, containerElement) => {
+            insigniaArray.forEach(insignia => {
                 const insigniaItem = document.createElement('div');
                 insigniaItem.classList.add('insignia-item');
                 insigniaItem.dataset.insigniaId = insignia.id;
@@ -198,17 +243,43 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 insigniaItem.addEventListener('click', () => {
                     assignInsigniaToSquare(insignia.id);
-                    insigniaSelectionModal.classList.remove('active'); // Use class for hiding
+                    insigniaSelectionModal.classList.remove('active');
                 });
+                containerElement.appendChild(insigniaItem);
+            });
+        };
 
-                // Append to the correct category
-                const categoryContainer = document.querySelector(`#${insignia.rarity.toLowerCase()}Insignias .category-insignias`);
-                if (categoryContainer) {
-                    categoryContainer.appendChild(insigniaItem);
-                }
-            }
-        });
-        insigniaSelectionModal.classList.add('active'); // Use class for showing
+        // Render and manage visibility for Legendary category
+        if (compatibleLegendary.length > 0) {
+            legendaryHeader.style.display = 'block';
+            legendaryContainer.style.display = 'flex'; // Assuming flex for layout
+            renderInsigniasForCategory(compatibleLegendary, legendaryContainer);
+        } else {
+            legendaryHeader.style.display = 'none';
+            legendaryContainer.style.display = 'none';
+        }
+
+        // Render and manage visibility for Epic category
+        if (compatibleEpic.length > 0) {
+            epicHeader.style.display = 'block';
+            epicContainer.style.display = 'flex';
+            renderInsigniasForCategory(compatibleEpic, epicContainer);
+        } else {
+            epicHeader.style.display = 'none';
+            epicContainer.style.display = 'none';
+        }
+
+        // Render and manage visibility for Rare category
+        if (compatibleRare.length > 0) {
+            rareHeader.style.display = 'block';
+            rareContainer.style.display = 'flex';
+            renderInsigniasForCategory(compatibleRare, rareContainer);
+        } else {
+            rareHeader.style.display = 'none';
+            rareContainer.style.display = 'none';
+        }
+
+        insigniaSelectionModal.classList.add('active');
     }
 
     function assignInsigniaToSquare(insigniaId) {

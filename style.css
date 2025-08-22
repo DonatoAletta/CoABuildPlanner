@@ -162,7 +162,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     width: 90%; /* Smaller width */
-    max-width: 600px; /* Max width for larger screens */
+    max-width: 750px; /* Adjusted max-width for more columns */
     box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Add shadow for depth */
     position: relative;
 }
@@ -171,10 +171,49 @@ body {
     color: #f0f0f0;
 }
 
+.insignia-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 500px; /* Limit height to enable scrolling */
+    padding-right: 10px; /* Add some padding for scrollbar */
+}
+
 .insignia-item {
     background-color: #3a3a3a;
     border: 1px solid #555;
     color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    /* Removed text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the top */
+    justify-content: space-between; /* Distribute content vertically */
+    width: 150px; /* Fixed width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.insignia-item div {
+    max-width: 100%; /* Ensure text wraps within the item */
+    word-wrap: break-word;
+    box-sizing: border-box;
+    text-align: left; /* Align text content to the left */
+    /* Removed margin-top: 5px; */
+    min-height: 80px; /* Ensure consistent height for text content, adjust as needed */
+}
+
+.insignia-item strong {
+    display: block; /* Ensure name takes its own line */
+    margin-bottom: 5px; /* Space below the name */
+}
+
+.insignia-item img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+    margin-bottom: 5px; /* Consistent spacing below image */
 }
 
 .insignia-item:hover {
@@ -186,16 +225,12 @@ body {
     border-color: #00aaff;
 }
 
-.insignia-item img {
-    border: 1px solid #666;
-}
-
 .actions-panel {
-    position: relative; /* Change to relative or remove if not needed for specific sub-positioning */
-    top: auto; /* Reset top */
-    left: auto; /* Reset left */
+    position: relative;
+    top: auto;
+    left: auto;
     display: flex;
-    flex-direction: column; /* Stack buttons vertically */
+    flex-direction: column;
     gap: 10px;
     margin-right: 15px; /* Space between buttons and left squares */
 }
@@ -286,9 +321,30 @@ body {
 }
 
 .category-insignias {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid for insignias */
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+    justify-content: center; /* Center items if they don't fill the row */
+}
+
+.app-footer {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    color: #bbb;
+    font-size: 0.8em;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 5px;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.app-footer p {
+    margin: 2px 0;
+}
+
+.app-footer p:first-of-type {
+    margin-bottom: 10px; /* Add space below this paragraph */
 }
 
 .insignia-item.disabled {

@@ -2,6 +2,22 @@
 
 This project creates a simple web page with a compact, dark-mode layout of insignia slots on the left and right, and a statistics section that updates based on assigned "Insignias."
 
+## New Features and Improvements
+
+*   **Dark Mode & Compact Layout:** The website now features a dark mode theme and a more compact arrangement of elements, with larger insignia slots.
+*   **Insignia Slot-Specific Selection:** When a slot is clicked, the insignia selection modal will only display insignias compatible with that specific slot. Categories with no compatible insignias for the selected slot are now dynamically hidden.
+*   **Categorized Insignia List:** The insignia selection modal now organizes insignias into "Legendary" (Yellow), "Epic" (Pink/Red), and "Rare" (Purple) categories, each with a corresponding colored square.
+*   **Improved Insignia Menu Layout:** Insignia names now wrap correctly, and items flow responsively within each category. Images are consistently aligned at the top of their containers, and text content is left-aligned.
+*   **Attack Type Display:** A new "Attack Type" section displays the current elemental attack type (e.g., "Umbro") and a corresponding colored circle, based on equipped insignias that grant "Gain \[Element] Attack" effects.
+*   **Attribute Percentage Display:** Primary attributes, ASPD, CD Rate, and all elemental attributes do *not* display a '%' symbol. All other attributes, including HP, PATK, MATK, PDEF, and MDEF, correctly display a '%' symbol.
+*   **New Loadout:** The "+ New Loadout" button, located to the left of the insignia slots and colored blue, clears all assigned insignias, resetting the page to a blank slate.
+*   **Share Loadout:** The "Share" button, located below "New Loadout" and colored green, generates a unique URL that encodes your current insignia setup. This URL is copied to your clipboard, allowing you to share your build. Opening this URL will automatically load the shared loadout.
+*   **Insignia Selection:** Choose an insignia from the list. The selected insignia's image and name will appear within the slot, with the slot name displayed at the top of the square. Insignia statistics are now clearly separated by new lines, and socket restrictions are displayed below the statistics.
+*   **Insignia Levels:** Each insignia can have 3 levels. Once an insignia is added, use the '-' and '+' buttons to adjust its level (minimum 1, maximum 3). The buttons will dynamically appear/disappear based on the current level. The attribute boosts will scale with the insignia level.
+*   **Insignia Restrictions:** Some insignias may have restrictions on which slots they can be placed in. Restricted insignias will appear disabled in the selection modal.
+*   **Scrolling Insignia List:** The insignia selection modal is now a smaller, centered box and supports vertical scrolling if there are many insignias or categories.
+*   **Footer:** A footer has been added to the bottom left of the page, containing "Made By" information.
+
 ## How to Run
 
 1.  **Save the files:** Ensure you have `index.html`, `style.css`, and `app.js` in the same directory. Create an `images` directory in the same location.
