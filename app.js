@@ -7,6 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let selectedSquare = null;
 
+    // Maps for insignia ID compression/decompression
+    const insigniaIdToShortIdMap = new Map();
+    const shortIdToInsigniaIdMap = new Map();
+
+    // Define a fixed order for slots to compress loadout URLs
+    const slotOrder = [
+        'left-1', 'left-2', 'left-3', 'left-4', 'left-5', 'left-6',
+        'right-1', 'right-2', 'right-3', 'right-4', 'right-5'
+    ];
+
     const insignias = [
         { id: 'void-bladematron', name: 'Void Bladematron Insignia', imageUrl: 'images/void_bladematron.png', levels: [{ "Skill DMG": 3.0, "BATK DMG": 3.0, "HP": 3.0 }, { "Skill DMG": 5.0, "BATK DMG": 5.0, "HP": 5.0 }, { "Skill DMG": 7.0, "BATK DMG": 7.0, "HP": 7.0 }], restrictions: ['Chestplate', 'Shoes'], rarity: 'Legendary' },
         { id: 'void-sovereign', name: 'Void Sovereign Insignia', imageUrl: 'images/void_sovereign.png', levels: [{ "DMG to Bosses": 3.0, "DMG to Otherworld": 3.0}, { "DMG to Bosses": 4.5, "DMG to Otherworld": 4.5}, { "DMG to Bosses": 6.0, "DMG to Otherworld": 6.0}], restrictions: ['Weapon'], rarity: 'Legendary' },
@@ -97,7 +107,46 @@ document.addEventListener('DOMContentLoaded', () => {
         // Ensure all attributes are initialized here
     };
 
+    // Populate insignia ID maps
+    insignias.forEach((insignia, index) => {
+        const shortId = String(index + 1); // Start from "1"
+        insigniaIdToShortIdMap.set(insignia.id, shortId);
+        shortIdToInsigniaIdMap.set(shortId, insignia.id);
+    });
+
     const assignedInsignias = {}; // Stores which insignia is assigned to which square and its level
+
+    // Helper function to compress the assigned insignias for URL sharing
+    function compressLoadout(loadout) {
+        const compressedSegments = slotOrder.map(slotId => {
+            const assigned = loadout[slotId];
+            if (assigned) {
+                const shortId = insigniaIdToShortIdMap.get(assigned.insigniaId);
+                return shortId ? `${shortId}-${assigned.level}` : 'X';
+            } else {
+                return 'X'; // Placeholder for empty slot
+            }
+        });
+        return compressedSegments.join('_'); // Use underscore as a delimiter
+    }
+
+    // Helper function to decompress the assigned insignias from URL
+    function decompressLoadout(compressedString) {
+        const decompressed = {};
+        const segments = compressedString.split('_');
+
+        segments.forEach((segment, index) => {
+            if (segment !== 'X') {
+                const [shortId, level] = segment.split('-');
+                const insigniaId = shortIdToInsigniaIdMap.get(shortId);
+                const slotId = slotOrder[index];
+                if (insigniaId && slotId) {
+                    decompressed[slotId] = { insigniaId: insigniaId, level: parseInt(level) };
+                }
+            }
+        });
+        return decompressed;
+    }
 
     function updateAttributeDisplay() {
         const attributeCategories = {
@@ -432,10 +481,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadoutParam = urlParams.get('loadout');
     if (loadoutParam) {
         try {
-            const decodedLoadout = JSON.parse(decodeURIComponent(loadoutParam));
-            for (const squareId in decodedLoadout) {
-                if (decodedLoadout.hasOwnProperty(squareId)) {
-                    const { insigniaId, level } = decodedLoadout[squareId];
+            const decompressedLoadout = decompressLoadout(decodeURIComponent(loadoutParam));
+            for (const squareId in decompressedLoadout) {
+                if (decompressedLoadout.hasOwnProperty(squareId)) {
+                    const { insigniaId, level } = decompressedLoadout[squareId];
                     assignedInsignias[squareId] = { insigniaId: insigniaId, level: level };
 
                     // Update the UI for the loaded insignia
@@ -535,7 +584,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const shareButton = document.getElementById('shareButton');
     shareButton.addEventListener('click', () => {
-        const encodedLoadout = encodeURIComponent(JSON.stringify(assignedInsignias));
+        const encodedLoadout = encodeURIComponent(compressLoadout(assignedInsignias));
         const shareUrl = `${window.location.origin}${window.location.pathname}?loadout=${encodedLoadout}`;
 
         // Copy to clipboard
