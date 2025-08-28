@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+    color: #f0f0f0; /* Light text */
+    margin: 0;
+    padding: 20px; /* Overall padding for the body */
+    display: flex; /* Make body a flex container */
+    align-items: flex-start; /* Align content to the top vertically */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    gap: 30px; /* Space between patch notes and main content */
+    box-sizing: border-box;
+}
+
+#patch-notes-box {
+    width: 280px; /* Fixed width for the patch notes box */
+    background-color: #2e2e2e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+    overflow-y: auto; /* Enable scrolling for patch notes content */
+    flex-shrink: 0; /* Prevent it from shrinking */
+    max-height: calc(100vh - 40px); /* Limit height to viewport height minus body padding */
+}
+
+#patch-notes-box h2 {
+    color: #4CAF50;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+}
+
+#patch-notes-content p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+#patch-notes-content strong {
+    color: #e0e0e0;
+}
+
+#patch-notes-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+#patch-notes-content li {
+    margin-bottom: 5px;
+}
+
+.container {
+    flex-grow: 1; /* Allow it to take up remaining space */
+    max-width: 900px; /* Maintain a max-width for the main content */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden; /* Important for containing children */
+    padding: 10px; /* Maintain existing padding */
+    margin-left: auto; /* Center the container in the remaining space */
+    margin-right: auto; /* Center the container in the remaining space */
+    transform: translateX(-60px); /* Nudge main content slightly to the left */
+}
