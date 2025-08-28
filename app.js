@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 'void-ring-keeper', name: 'Void Ring Keeper Insignia', imageUrl: 'images/void-ring-keeper.png', levels: [{"Resonance Recharge":3, "DMG during Resonance": 3},{"Resonance Recharge":4.5, "DMG during Resonance": 4.5},{"Resonance Recharge":6, "DMG during Resonance": 6}], restrictions: ['Necklace','Ring'], rarity: 'Epic' },
         { id: 'chaos-breaker', name: 'Chaos Breaker Insignia', imageUrl: 'images/chaos-breaker.png', levels: [{"Shield Break Efficiency":3, "DMG after Shield Break": 3},{"Shield Break Efficiency":4.5, "DMG after Shield Break": 4.5},{"Shield Break Efficiency":6, "DMG after Shield Break": 6}], restrictions: ['Gloves','Bracers'], rarity: 'Epic' },
         { id: 'mystic', name: 'Mystic Insignia', imageUrl: 'images/mystic.png', levels: [{"Crit DMG": 8},{"Crit DMG": 8},{"Crit DMG": 8} ], restrictions: ['Weapon'], rarity: 'Epic' },
+        { id: 'tarina', name: 'Tarina Insignia', imageUrl: 'images/tarina.png', levels: [{"Strength": 100, "Intelligence": 100},{"Strength": 100, "Intelligence": 100},{"Strength": 100, "Intelligence": 100} ], restrictions: ['Weapon'], rarity: 'Legendary' },
 
     ];
 
